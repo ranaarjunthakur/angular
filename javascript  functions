@@ -63,7 +63,7 @@ function factorial (n) {
 console.log(factorial(6)); // -> 720
 
 
-//////////////////////////////////////////
+///////////////passing the function as a call parameter to other functions///////////////////////////
 
 function add(a, b) {
     return a + b;
