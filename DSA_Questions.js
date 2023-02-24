@@ -33,3 +33,16 @@ function bubbleSortAlgo(arr){
     }  
     console.log(arr);  
 }  
+////////////////////////returns a subset of a string.///////////////////////////////////
+
+String.prototype.substring = function (){
+    let subset =[];
+    for(let m=0; m<this.length;m++){
+        for(let n=m+1; n<this.length+1;n++){
+            subset.push(this.slice(m,n))
+        }
+    }
+    return subset
+}
+
+console.log("dog".substring()) =>[ 'd', 'do', 'dog', 'o', 'og', 'g' ]
