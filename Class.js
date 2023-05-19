@@ -58,5 +58,60 @@ console.log(angularDeveloper.isTakenName('Jon'))   // false
 let NewReactDeveloper = new  ReactDeveloper('Akki','24','Noida',['Why I like JS'])
 console.log(NewReactDeveloper)
 
+/////////////////////////Getters & Setters//////////////////////////////////////////////
+
+class Developer{
+
+    #skill;
+    framework;
+    expertise;
+    
+    constructor(skill,framework,expertise){
+        this.#skill = skill
+        this.framework = framework
+        this.expertise = expertise
+    }
+    
+    AngularDeveloper(){
+        return this.skills
+        console.log('I am a Angular Developer')
+    }
+    
+    static ReactDeveloper(){
+        console.log('I am a React Developer')
+    }
+    
+    set setSkill(skill){
+        this.skill=skill
+    }
+    
+    get setSkill(){
+        return this.skill 
+    }
+    
+    set framework(framework){
+        this.framework=framework
+    }
+    
+    get framework(){
+        return thhis.framework
+    }
+}
+
+
+let newDeveloper = new Developer('Angular' ,'Javascript Framework','2 years')
+
+newDeveloper.AngularDeveloper()
+console.log(newDeveloper.skills)
+
+Developer.setSkill = 'React'
+console.log(Developer.setSkill)
+
+Developer.framework ='jQuery'
+console.log(Developer.framework)
+
+newDeveloper.AngularDeveloper()
+
+Developer.ReactDeveloper()
 
 
