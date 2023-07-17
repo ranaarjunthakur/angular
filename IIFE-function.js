@@ -59,6 +59,29 @@ IIFE.setter(15)
 console.log(IIFE.getter())
 
 
+ /////////////////////////////////////////////////////////////////////////////
+
+const calculator = (function () {
+    function add(a, b) {
+        return a + b;
+    }
+
+    function multiply(a, b) {
+        return a * b;
+    }
+    return {
+        add: add,
+        multiply: multiply
+    }
+})();
+
+
+
+console.log(calculator.add(10,3))                   => 13
+
+console.log(calculator.multiply(10,3))              => 30
+
+
 ////////////Also, you can pass arguments in IIFE as shown below////////////////////////
 
 var userName = "Bill";
