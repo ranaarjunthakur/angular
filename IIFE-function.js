@@ -36,6 +36,29 @@ let sum = (function(a,b){
 console.log(sum);
 
 
+////////////////////////////// getter & setter (we can make private variable using IIFE function)//////////////////////////////////////////////
+
+
+var IIFE = (function (){
+  
+  let val=12;                         //private variable can't  access outside  this function .
+  return {
+    getter: function(){
+      console.log(val)
+    },
+    setter: function(items){
+      val = items
+    }
+  }
+  
+})()
+
+
+console.log(IIFE.getter())
+IIFE.setter(15)
+console.log(IIFE.getter())
+
+
 ////////////Also, you can pass arguments in IIFE as shown below////////////////////////
 
 var userName = "Bill";
